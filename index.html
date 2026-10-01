@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/dumpling-logo.png">
 </head>
 <body>
 <header>
@@ -21,7 +22,9 @@
 
             <!-- Center Group -->
             <li class="nav-center">
-                <a id="brand-name" href="#home">Cha & Bao</a>
+                <a id="brand-name" href="#home">
+                    <img src="images/chaobao-logo.png" alt="Cha & Bao Logo" class="nav-logo">
+                </a>
             </li>
         </ul>
     </nav>
@@ -32,22 +35,25 @@
         <div class="slider-wrapper">
             <div class="slider">
                 <video id="slide-1" autoplay loop muted playsinline alt="Steaming Dumplings Video">
-                    <source src="video/steaming-baskets.mp4" type="video/mp4">
+                    <source src="videos/landing-page1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
-                <img id="slide-2" src="images/hero-slider/dim-sum-spread.png" alt="Dim Sum Spread">
+                <video id="slide-2" autoplay loop muted playsinline alt="Steaming Dumplings Video">
+                    <source src="videos/landing-page2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-                <video id="slide-3" autoplay loop muted playsinline alt="Pouring Tea Video">
-                    <source src="video/pouring-tea.mp4" type="video/mp4">
+                <video id="slide-3" autoplay loop muted playsinline alt="Steaming Dumplings Video">
+                    <source src="videos/landing-page3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
 
             <div class="hero-overlay">
-                <h1 class="hero-quote">Good Things Come Steaming</h1>
+                <h1 class="hero-quote">Good Things Come Steaming.</h1>
                 <div class="button-container">
-                    <a href="#menu" class="cta-button">Find your favorites.</a>
+                    <a href="menu.html" class="cta-button">Find your favorites.</a>
                 </div>
             </div>
 
@@ -101,6 +107,10 @@
                 <a href="#menu" class="cta-button">Check it out!</a>
             </div>
         </div>
+        
+        <div>
+            <img src="">
+        </div>
     </section>
 
     <!-- LOCATION SECTION -->
@@ -109,7 +119,7 @@
             <h2>A warm welcome on Main Street.</h2>
             <p>Pop in for lunch, bring the whole crew, or call ahead when the cravings hit.</p>
             
-            <img src="images/location-storefront.jpg" alt="Cha and Bao Storefront">
+            <img src="images/map.png" alt="Cha and Bao Storefront">
             
             <address class="store-address">
                 <strong>Cha & Bao</strong><br>
@@ -118,5 +128,39 @@
             </address>
         </div>
     </section>
+
+     <!-- FOOTER SECTION -->
+    <footer>
+        <section class="footer-section">
+            <div class="footer-content">
+                <div class="forma-descrip">
+                    <a href="index.html">
+                        <img id="chaobao-logo" src="images/chaobao-logo.png" alt="Chaobao-Logo">
+                    </a>
+                </div>
+
+                <div class="footer-column quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="nav-left">
+                            <a href="#home">HOME</a>
+                            <a href="menu.html">MENU & PRICES</a>
+                            <a href="events.html">EVENTS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column social-links">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank">Tiktok</a></li>
+                        <li><a href="https://shopee.ph" target="_blank">Shopee</a></li>
+                        <li class="copyright">© 2026, Cha & Bao</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

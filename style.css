@@ -1,0 +1,568 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ede4ca; 
+    color: #2f4f4f; 
+    line-height: 1.6;
+}
+
+h1, h2, h3, 
+#brand-name {
+    font-family: 'Cardo', serif;
+}
+
+/*  NAVIGATION (HEADER) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8b0000; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.navbar-tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 1.2rem 4rem;
+}
+
+.nav-left {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: #ede4ca;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-left a:hover {
+    color: #d4af37; 
+}
+
+.nav-center a#brand-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 70px; 
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Adds a smooth hover effect */
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   HERO SLIDER
+========================================= */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.slider video, 
+.slider img {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+    filter: brightness(0.5); /* Darkens media to make text pop */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.hero-quote {
+    font-size: clamp(3rem, 6vw, 6rem);
+    color: #faf8f5;
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+/* Call to Action Buttons */
+.cta-button {
+    background-color: #8b0000; /* Deep Crimson Red */
+    color: #faf8f5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 16px 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #d4af37;
+    color: #2f4f4f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+.about-section {
+    padding: 6rem 2rem;
+    background-color: #faf8f5;
+    text-align: center;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto 5rem auto;
+}
+
+.about-intro h2 {
+    font-size: 3rem;
+    color: #8b0000;
+    margin-bottom: 1.5rem;
+}
+
+.about-intro p {
+    font-size: 1.05rem;
+    color: #2f4f4f;
+    line-height: 1.8;
+}
+
+.features-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-top: 8px solid #d4af37;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.feature-card h3 {
+    font-size: 1.6rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* =========================================
+   PROMOTIONAL BOX (DOTTED STYLING)
+========================================= */
+.promo-section {
+    padding: 7rem 2rem;
+    background-color: #8b0000;
+    background-size: 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo-content {
+    background-color: #faf8f5;
+    border: 8px dotted #d4af37;
+    padding: 4rem 3rem;
+    max-width: 750px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.promo-content h2 {
+    font-size: 2.8rem;
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+}
+
+.promo-content h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.promo-content p {
+    font-size: 1.1rem;
+    color: #2f4f4f;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* =========================================
+   LOCATION SECTION
+========================================= */
+.location-section {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.location-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-content h2 {
+    font-size: 3rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.location-content > p {
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+    color: #555;
+}
+
+.location-content img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.store-address {
+    font-style: normal;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.store-address strong {
+    font-family: 'Cardo', serif;
+    font-size: 1.5rem;
+    color: #8b0000;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   MENU HERO INTRO
+========================================= */
+.menu-section {
+    padding: 12rem 2rem 6rem 2rem;
+    background-color: #faf8f5;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.menu-section h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.menu-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.order-button a {
+    background-color: #8b0000;
+    color: #faf8f5;
+    padding: 14px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.order-button a:hover {
+    background-color: #faf8f5;
+    color: #8b0000;
+}
+
+/* =========================================
+   MENU CATALOGUE GRID (CSS GRID)
+========================================= */
+.menu-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+/* Spans the category title across all grid columns */
+.menu-options > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.8rem;
+    color: #8b0000;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mat-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #e9e5df; /* Placeholder bg */
+    overflow: hidden;
+}
+
+.mat-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hover-img {
+    opacity: 0;
+    z-index: 1;
+}
+
+.mat-img-wrapper:hover .hover-img {
+    opacity: 1;
+}
+
+.mat-img-wrapper:hover .base-img {
+    opacity: 0;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #d4af37;
+    color: #1a1a1a;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+/* Quick Add Hover Button */
+.quick-add-btn {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8b0000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 0;
+    width: 85%;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3;
+    transition: bottom 0.3s ease, opacity 0.3s ease, background-color 0.2s ease;
+}
+
+.menu-card:hover .quick-add-btn {
+    bottom: 20px;
+    opacity: 1;
+}
+
+.quick-add-btn:hover {
+    background-color: #2f4f4f;
+}
+
+.food-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.food-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2f4f4f;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.food-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #8b0000;
+}
+
+/* =========================================
+   MENU NOTES
+========================================= */
+.menu-notes {
+    max-width: 900px;
+    margin: 0 auto 6rem auto;
+    padding: 3rem;
+    background-color: #2f4f4f;
+    color: #faf8f5;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.menu-notes ul {
+    list-style-type: none;
+}
+
+.menu-notes li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu-notes li::before {
+    content: '🥟';
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   RESPONSIVENESS
+========================================= */
+@media (max-width: 992px) {
+    .promo-content {
+        padding: 3rem 2rem;
+    }
+    
+    .menu-options {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-tabs {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .nav-left {
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .hero-quote {
+        font-size: 3rem;
+    }
+
+    .about-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .promo-section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .promo-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .menu-options {
+        padding: 3rem 1.5rem;
+    }
+
+    .menu-options > h1 {
+        font-size: 2.2rem;
+    }
+
+    .quick-add-btn {
+        /* Always show on mobile since there is no hover */
+        bottom: 20px;
+        opacity: 1;
+        background-color: rgba(139, 0, 0, 0.9);
+    }
+}
