@@ -68,7 +68,7 @@ header {
     height: 70px; 
     width: auto;
     display: block;
-    transition: transform 0.3s ease; /* Adds a smooth hover effect */
+    transition: transform 0.3s ease; 
 }
 
 .nav-logo:hover {
@@ -97,11 +97,11 @@ header {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
 }
 
 .slider::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none; 
 }
 
 .slider video, 
@@ -131,7 +131,7 @@ header {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #faf8f5; /* Warm cream to match your theme */
+    background-color: #faf8f5; 
     opacity: 0.5;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -161,7 +161,7 @@ header {
 }
 
 .cta-button {
-    background-color: #8b0000; /* Deep Crimson Red */
+    background-color: #8b0000; 
     color: #faf8f5;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
@@ -249,7 +249,7 @@ header {
     
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Forces both boxes to be the exact same height */
+    align-items: stretch; 
     gap: 3rem; 
     flex-wrap: wrap; 
     border-top: 24px solid #4a7b59
@@ -259,27 +259,26 @@ header {
     background-color: #faf8f5;
     border: 16px dotted #d4af37;
     padding: 4rem 3rem;
-    flex: 1; /* Allows the box to scale evenly */
-    max-width: 500px; /* Locks the max width to match the image */
+    flex: 1; 
+    max-width: 500px; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers the text vertically inside the box */
+    justify-content: center; 
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* We added this wrapper rule so it plays nicely with the flex grid */
 .promo-image-wrapper {
-    flex: 1; /* Matches the text box scale */
-    max-width: 500px; /* Matches the text box width */
+    flex: 1; 
+    max-width: 500px;
     display: flex;
 }
 
 .promo-image-wrapper img {
     width: 100%;
-    height: 100%; /* Forces the image to stretch to the exact height of the text box */
-    object-fit: cover; /* Ensures the image doesn't look stretched or squished */
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 12px;
     border: solid 16px white;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
@@ -355,7 +354,7 @@ header {
     border-radius: 12px;
     border: 2px solid #e9e5df;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    text-align: left; /* Keeps text aligned inside the boxes */
+    text-align: left; 
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -422,16 +421,15 @@ header {
    MENU CATALOGUE GRID
 ========================================= */
 .menu-options {
-    display: flex; /* Switched from Grid to Flexbox */
-    flex-wrap: wrap; /* Allows cards to drop to the next line */
-    justify-content: center; /* Centers the orphaned cards on the bottom row */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
     gap: 2.5rem;
     max-width: 1300px;
     margin: 0 auto;
     padding: 5rem 2rem;
 }
 
-/* Forces the category title to take up its own full row */
 .menu-options > h1 {
     flex: 0 0 100%; 
     text-align: center;
@@ -443,8 +441,8 @@ header {
 }
 
 .menu-card {
-    flex: 1 1 300px; /* Allows cards to scale fluidly */
-    max-width: 380px; /* Locks the max width so the bottom two cards don't stretch too wide */
+    flex: 1 1 300px; 
+    max-width: 380px; 
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
@@ -463,7 +461,7 @@ header {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
-    background-color: #e9e5df; /* Placeholder bg */
+    background-color: #e9e5df;
     overflow: hidden;
 }
 
@@ -542,16 +540,15 @@ header {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    flex-grow: 1; /* Ensures the white card fills the available height */
-    /* Note: Removed justify-content: space-between so we can control the spacing manually */
+    flex-grow: 1;
 }
 
 .food-name {
     font-family: 'Cardo', serif;
-    font-size: 1.4rem; /* Slightly larger for better contrast */
-    font-weight: 700; /* Bolder to establish it as the primary element */
+    font-size: 1.4rem; 
+    font-weight: 700; 
     color: #2f4f4f;
-    margin-bottom: 0.2rem; /* Pulls the piece count closer to the name */
+    margin-bottom: 0.2rem; 
     line-height: 1.3;
 }
 
@@ -559,7 +556,7 @@ header {
     font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
     font-weight: 400;
-    color: #777; /* Subtle grey creates a clear secondary hierarchy */
+    color: #777; 
     display: block;
 }
 
@@ -568,8 +565,8 @@ header {
     font-size: 1.3rem; 
     font-weight: 700;
     color: #8b0000;
-    margin-top: auto; /* THE MAGIC TRICK: Pushes the price to the absolute bottom of the card */
-    padding-top: 1rem; /* Gives it a little breathing room from the text above */
+    margin-top: auto; 
+    padding-top: 1rem; 
 }
 
 /* =========================================
@@ -606,7 +603,6 @@ header {
    EVENTS & EXPERIENCES PAGE
 ========================================= */
 .events-container {
-    /* Large top padding to push content below your fixed header */
     padding: 10rem 2rem 6rem 2rem; 
     max-width: 1200px;
     margin: 0 auto;
@@ -620,8 +616,8 @@ header {
 
 .category-badge {
     display: inline-block;
-    background-color: #8b0000; /* Deep Crimson */
-    color: #d4af37; /* Gold */
+    background-color: #8b0000; 
+    color: #d4af37; 
     font-size: 1.8rem;
     width: 60px;
     height: 60px;
@@ -644,7 +640,7 @@ header {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    border: 8px solid #ffffff; /* Gives it a framed photograph look */
+    border: 8px solid #ffffff; 
 }
 
 .hero-image {
@@ -657,9 +653,9 @@ header {
 /* --- Events Grid --- */
 .events-list {
     list-style: none;
-    display: flex; /* Switched to flexbox */
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
-    justify-content: center; /* Centers the orphaned cards on the bottom row */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
     gap: 2.5rem;
     padding: 0;
     text-align: left;
@@ -667,8 +663,8 @@ header {
 
 /* --- Individual Event Cards --- */
 .event-item {
-    flex: 1 1 300px; /* Allows cards to grow and shrink, with a base width of 300px */
-    max-width: 350px; /* Prevents them from stretching too wide */
+    flex: 1 1 300px; 
+    max-width: 350px; 
     
     background-color: #ffffff;
     padding: 2.5rem 2.5rem 3rem 2.5rem;
@@ -686,7 +682,6 @@ header {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Pulls the emoji from the data-icon attribute in your HTML */
 .event-item::before {
     content: attr(data-icon);
     font-size: 2.5rem;
@@ -694,7 +689,6 @@ header {
     margin-bottom: 1rem;
 }
 
-/* Small Chinese Character Accent Tag */
 .cn-tag {
     position: absolute;
     top: 1.5rem;
@@ -725,7 +719,7 @@ header {
     font-size: 1.05rem;
     color: #2f4f4f;
     line-height: 1.7;
-    flex-grow: 1; /* Pushes content evenly if cards are different heights */
+    flex-grow: 1; 
 }
 
 /* =========================================
@@ -756,14 +750,6 @@ footer .footer-nav {
 /* =========================================
    FOOTER SECTION
 ========================================= */
-.footer-section {
-    background-color: #8b0000; 
-    width: 100%;
-    color: #faf8f5;
-    font-family: 'Poppins', sans-serif;
-    border-top: 24px solid #d4af37; 
-}
-
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -781,7 +767,7 @@ footer .footer-nav {
 }
 
 #chaobao-logo {
-    height: 150px; /* Adjust this to size your logo */
+    height: 150px; 
     width: auto;
     display: block;
     margin-bottom: 1rem;
@@ -794,19 +780,18 @@ footer .footer-nav {
 .footer-column h4 {
     font-family: 'Cardo', serif;
     font-size: 1.4rem;
-    color: #d4af37; /* Warm Gold */
+    color: #d4af37; 
     margin-bottom: 1.5rem;
     position: relative;
     letter-spacing: 1px;
 }
 
-/* Red underline accent for footer headers */
 .footer-column h4::after {
     content: '';
     display: block;
     width: 40px;
     height: 3px;
-    background-color: #8b0000; /* Deep Crimson */
+    background-color: #8b0000; 
     margin-top: 8px;
     border-radius: 2px;
 }
@@ -829,7 +814,6 @@ footer .footer-nav {
     display: inline-block;
 }
 
-/* Hover effect for links */
 .footer-column a:hover {
     color: #d4af37;
     transform: translateX(4px);
@@ -857,7 +841,7 @@ footer .footer-nav {
     }
 
     .footer-column h4::after {
-        margin: 8px auto 0 auto; /* Centers the red underline on mobile */
+        margin: 8px auto 0 auto; 
     }
     
     .forma-descrip {
@@ -917,7 +901,6 @@ footer .footer-nav {
     }
 
     .quick-add-btn {
-        /* Always show on mobile since there is no hover */
         bottom: 20px;
         opacity: 1;
         background-color: rgba(139, 0, 0, 0.9);
