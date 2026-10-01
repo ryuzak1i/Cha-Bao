@@ -599,6 +599,146 @@ header {
 }
 
 /* =========================================
+   EVENTS & EXPERIENCES PAGE
+========================================= */
+.events-container {
+    /* Large top padding to push content below your fixed header */
+    padding: 10rem 2rem 6rem 2rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- Header & Badges --- */
+.page-header {
+    margin-bottom: 3rem;
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: #8b0000; /* Deep Crimson */
+    color: #d4af37; /* Gold */
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    font-family: 'Cardo', serif;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+.page-header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+/* --- Hero Image --- */
+.hero-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 5rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border: 8px solid #ffffff; /* Gives it a framed photograph look */
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Events Grid --- */
+.events-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 0;
+    text-align: left;
+}
+
+/* --- Individual Event Cards --- */
+.event-item {
+    background-color: #ffffff;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    border-top: 10px solid #d4af37; /* Gold accent line matching home page */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulls the emoji from the data-icon attribute in your HTML */
+.event-item::before {
+    content: attr(data-icon);
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Small Chinese Character Accent Tag */
+.cn-tag {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: #faf8f5;
+    color: #8b0000;
+    font-family: 'Cardo', serif;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px dotted #d4af37;
+}
+
+.event-title {
+    font-family: 'Cardo', serif;
+    font-size: 1.6rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.event-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: #2f4f4f;
+    line-height: 1.7;
+    flex-grow: 1; /* Pushes content evenly if cards are different heights */
+}
+
+/* --- Temporary Fix for the Events Footer --- */
+/* (Your events.html uses different footer classes than index.html. 
+    This ensures it still looks decent until you copy/paste the main footer over!) */
+footer .footer-logo {
+    font-family: 'Cardo', serif;
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+footer .footer-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* =========================================
    FOOTER SECTION
 ========================================= */
 .footer-section {
@@ -686,6 +826,8 @@ header {
     color: #a9a9a9;
     letter-spacing: 0.5px;
 }
+
+
 
 /* =========================================
    FOOTER RESPONSIVENESS

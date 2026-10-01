@@ -10,25 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+<header>
+    <nav class="navbar">
+        <ul class="navbar-tabs">
+            <!-- Left Group -->
+            <li class="nav-left">
+                <a href="#home">HOME</a>
+                <a href="menu.html">MENU & PRICES</a>
+                <a href="events.html">EVENTS</a>
+            </li>
 
-    <!-- Header & Navigation -->
-    <header>
-        <nav class="navbar">
-            <ul class="navbar-tabs">
-                <!-- Left Group -->
-                <li class="nav-left">
-                    <a href="index.html">HOME</a>
-                    <a href="menu.html">MENU & PRICES</a>
-                    <a href="events.html" class="active">EVENTS</a>
-                </li>
-
-                <!-- Center Group -->
-                <li class="nav-center">
-                    <a id="brand-name" href="index.html">Cha & Bao <span class="cn-char">茶与包</span></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            <!-- Center Group -->
+            <li class="nav-center">
+                <a id="brand-name" href="#home">
+                    <img src="images/chaobao-logo.png" alt="Cha & Bao Logo" class="nav-logo">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
     <!-- Main Content -->
     <main class="events-container">
@@ -41,7 +41,7 @@
 
         <!-- Featured Hero Image -->
         <div class="hero-wrapper">
-            <img class="hero-image" src="events.jpg" alt="Chef hand-folding fresh dumplings and a lively kitchen setup">
+            <img class="hero-image" src="images/events-pic.png" alt="Chef hand-folding fresh dumplings and a lively kitchen setup">
         </div>
 
         <!-- Featured Events & Services List -->
@@ -81,18 +81,32 @@
 
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Cha & Bao <span class="cn-char">茶与包</span></div>
-            <div class="manager-title">Manager: [Your Name]</div>
-            <ul class="footer-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu & Prices</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-            <p class="copyright">&copy; 2026 Cha & Bao Restaurant. All Rights Reserved.</p>
-        </div>
+   <footer>
+            <div class="footer-content">
+                <div class="footer-descrip">
+                    <a href="index.html">
+                        <img id="chaobao-logo" src="images/chaobao-logo.png" alt="Chaobao-Logo">
+                    </a>
+                </div>
+
+                <div class="footer-column quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu & Prices</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column social-links">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com" target="_blank">Tiktok</a></li>
+                        <li class="copyright">© 2026, Cha & Bao</li>
+                    </ul>
+                </div>
+            </div>
     </footer>
 
 </body>
