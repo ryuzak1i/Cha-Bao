@@ -455,7 +455,7 @@ header {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-.mat-img-wrapper {
+.food-img-wrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -463,7 +463,7 @@ header {
     overflow: hidden;
 }
 
-.mat-img-wrapper img {
+.food-img-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -478,11 +478,11 @@ header {
     z-index: 1;
 }
 
-.mat-img-wrapper:hover .hover-img {
+.food-img-wrapper:hover .hover-img {
     opacity: 1;
 }
 
-.mat-img-wrapper:hover .base-img {
+.food-img-wrapper:hover .base-img {
     opacity: 0;
 }
 
@@ -536,24 +536,36 @@ header {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
-    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    flex-grow: 1; /* Ensures the white card fills the available height */
+    /* Note: Removed justify-content: space-between so we can control the spacing manually */
 }
 
 .food-name {
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-family: 'Cardo', serif;
+    font-size: 1.4rem; /* Slightly larger for better contrast */
+    font-weight: 700; /* Bolder to establish it as the primary element */
     color: #2f4f4f;
-    margin-bottom: 0.8rem;
-    line-height: 1.4;
+    margin-bottom: 0.2rem; /* Pulls the piece count closer to the name */
+    line-height: 1.3;
+}
+
+.piece-count {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #777; /* Subtle grey creates a clear secondary hierarchy */
+    display: block;
 }
 
 .food-price {
-    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem; 
     font-weight: 700;
     color: #8b0000;
+    margin-top: auto; /* THE MAGIC TRICK: Pushes the price to the absolute bottom of the card */
+    padding-top: 1rem; /* Gives it a little breathing room from the text above */
 }
 
 /* =========================================
