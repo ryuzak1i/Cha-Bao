@@ -14,9 +14,9 @@
         <ul class="navbar-tabs">
             <!-- Left Group -->
             <li class="nav-left">
-                <a href="#catalogue">HOME</a>
-                <a href="our-story.html">MENU & PRICES</a>
-                <a href="events.html">EVENTS</a>
+                <a href="#home">HOME</a>
+                <a href="#menu">MENU & PRICES</a>
+                <a href="#events">EVENTS</a>
             </li>
 
             <!-- Center Group -->
@@ -27,27 +27,27 @@
     </nav>
 </header>
 
- <!-- HERO SLIDER SECTION -->
-    <main id="home" class="section-container">
+    <!-- HERO SLIDER SECTION -->
+    <main id="home" class="hero-section">
         <div class="slider-wrapper">
             <div class="slider">
-                <video id="slide-1" autoplay loop muted playsinline alt="Video Mat">
-                    <source src="video/forma-vid.mp4" type="video/mp4">
+                <video id="slide-1" autoplay loop muted playsinline alt="Steaming Dumplings Video">
+                    <source src="video/steaming-baskets.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
-                <img id="slide-2" src="images/Home-slider/yoga-pose-vig.png" alt="Yoga Session">
+                <img id="slide-2" src="images/hero-slider/dim-sum-spread.png" alt="Dim Sum Spread">
 
-                <video id="slide-3" autoplay loop muted playsinline alt="Video Mat">
-                    <source src="video/forma-mat-vid.mp4" type="video/mp4">
+                <video id="slide-3" autoplay loop muted playsinline alt="Pouring Tea Video">
+                    <source src="video/pouring-tea.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
 
             <div class="hero-overlay">
-                <h1 class="home-quote">Good Things Come Steaming</h1>
+                <h1 class="hero-quote">Good Things Come Steaming</h1>
                 <div class="button-container">
-                    <h4 class="shop-button"><a href="#catalogue">Find your favorites.</a></h4>
+                    <a href="#menu" class="cta-button">Find your favorites.</a>
                 </div>
             </div>
 
@@ -59,9 +59,10 @@
         </div>
     </main>
 
-    <section>
-        <div>
-            <h1>Shanghai Spirit, Small Town Heart.</h1>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="about-intro">
+            <h2>Shanghai Spirit, Small Town Heart.</h2>
             <p>Welcome to Cha & Bao (茶与包) - Step into an authentic taste of Shanghai 
                 right in your neighborhood. At Cha & Bao, we honor time-tested culinary 
                 traditions with our delicate, handcrafted soup dumplings filled with rich broth, 
@@ -71,41 +72,50 @@
             </p>
         </div>
 
-        <div class="fact-one">
-            <h3>Folded by Hand</h3>
-            <p>Every pleat, pinch, and little parcel is made in our kitchen.</p>
-        </div>
+        <div class="features-wrapper">
+            <div class="feature-card">
+                <h3>Folded by Hand</h3>
+                <p>Every pleat, pinch, and little parcel is made in our kitchen.</p>
+            </div>
 
-        <div class="fact-two">
-            <h3>Steam, never shortcuts</h3>
-            <p>Fresh bamboo-steamed treats, made to order and meant to share.</p>
-        </div>
+            <div class="feature-card">
+                <h3>Steam, Never Shortcuts</h3>
+                <p>Fresh bamboo-steamed treats, made to order and meant to share.</p>
+            </div>
 
-        <div class="fact-three">
-            <h3>Folded by Hand</h3>
-            <p>Every pleat, pinch, and little parcel is made in our kitchen.</p>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <h1> Chef’s Holiday Steamer Special</h1>
-            <h5>$28 Holiday Dim Sum Sampler Basket (Dec 20–24)</h5>
-            <p>Perfect warm comfort food for holiday gatherings & shopping breaks!</p>
-
-            <div class="button-container">
-                <h4 class="shop-button"><a href="#catalogue">Check it out!</a></h4>
+            <div class="feature-card">
+                <h3>Steeped in Tradition</h3>
+                <p>Premium tea leaves sourced directly to pair perfectly with your meal.</p>
             </div>
         </div>
     </section>
 
-    <section>
-        <div>
-            <h1>A warm welcome on Main Street.</h1>
+    <!-- PROMO SECTION -->
+    <section id="promo" class="promo-section">
+        <div class="promo-content">
+            <h2>Chef’s Holiday Steamer Special</h2>
+            <h5>$28 Holiday Dim Sum Sampler Basket (Dec 20–24)</h5>
+            <p>Perfect warm comfort food for holiday gatherings & shopping breaks!</p>
 
+            <div class="button-container">
+                <a href="#menu" class="cta-button">Check it out!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="location-section">
+        <div class="location-content">
+            <h2>A warm welcome on Main Street.</h2>
             <p>Pop in for lunch, bring the whole crew, or call ahead when the cravings hit.</p>
-            <img src="">
-            <p>Cha & Bao 200 Main Street Roastersville, WV</p>
+            
+            <img src="images/location-storefront.jpg" alt="Cha and Bao Storefront">
+            
+            <address class="store-address">
+                <strong>Cha & Bao</strong><br>
+                200 Main Street<br>
+                Roastersville, WV
+            </address>
         </div>
     </section>
 </body>
