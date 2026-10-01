@@ -3,66 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cha & Bao | Menu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>Cha & Bao | Events & Experiences</title>
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Header & Navigation -->
     <header>
-    <nav class="navbar">
-        <ul class="navbar-tabs">
-            <!-- Left Group -->
-            <li class="nav-left">
-                <a href="index.html">HOME</a>
-                <a href="menu.html">MENU & PRICES</a>
-                <a href="events.html">EVENTS</a>
+        <nav class="navbar">
+            <ul class="navbar-tabs">
+                <!-- Left Group -->
+                <li class="nav-left">
+                    <a href="index.html">HOME</a>
+                    <a href="menu.html">MENU & PRICES</a>
+                    <a href="events.html" class="active">EVENTS</a>
+                </li>
+
+                <!-- Center Group -->
+                <li class="nav-center">
+                    <a id="brand-name" href="index.html">Cha & Bao <span class="cn-char">茶与包</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="events-container">
+        
+        <!-- Section Header with Single Chinese Character Badge -->
+        <div class="page-header">
+            <span class="category-badge">聚</span> <!-- Single Character for Gathering/Events -->
+            <h1>Upcoming Events & Experiences at Cha & Bao</h1>
+        </div>
+
+        <!-- Featured Hero Image -->
+        <div class="hero-wrapper">
+            <img class="hero-image" src="events.jpg" alt="Chef hand-folding fresh dumplings and a lively kitchen setup">
+        </div>
+
+        <!-- Featured Events & Services List -->
+        <ul class="events-list">
+            
+            <li class="event-item" data-icon="🥟">
+                <span class="cn-tag">御</span> <!-- Masterclass Accent -->
+                <h3 class="event-title">Xiao Long Bao Folding Masterclass</h3>
+                <p class="event-description">Monthly Saturday morning hands-on workshop teaching guests how to roll dough, pleat, and soup-fill authentic Xiao Long Bao.</p>
             </li>
 
-            <!-- Center Group -->
-            <li class="nav-center">
-                <a id="brand-name" href="#home">Cha & Bao</a>
+            <li class="event-item" data-icon="🎷">
+                <span class="cn-tag">乐</span> <!-- Music/Joy Accent -->
+                <h3 class="event-title">Friday Dumplings & Live Jazz Nights</h3>
+                <p class="event-description">Every Friday evening at 7 PM, enjoy live acoustic jazz music while sharing steamer baskets and craft cocktails.</p>
             </li>
+
+            <li class="event-item" data-icon="🍵">
+                <span class="cn-tag">茶</span> <!-- Tea Accent -->
+                <h3 class="event-title">Tea & Dim Sum Pairing Circle</h3>
+                <p class="event-description">Join our tasting circle every first Monday evening. Learn how to pair premium loose-leaf Chinese teas with savory bao.</p>
+            </li>
+
+            <li class="event-item" data-icon="🥢">
+                <span class="cn-tag">味</span> <!-- Taste/Flavor Accent -->
+                <h3 class="event-title">Seasonal Chef’s Tasting Flights</h3>
+                <p class="event-description">Sample limited-edition micro-batches like Truffle Xiao Long Bao and Wagyu Shao Mai guided by our head chef.</p>
+            </li>
+
+            <li class="event-item" data-icon="🎤">
+                <span class="cn-tag">艺</span> <!-- Performance/Art Accent -->
+                <h3 class="event-title">Community Open Mic & Storytelling</h3>
+                <p class="event-description">A monthly showcase for local performers, poets, and storytellers. Free order of Sweet Custard Buns for all performers.</p>
+            </li>
+
         </ul>
-    </nav>
-</header>
 
-<main>
-    <h1>Upcoming Events & Experiences at Cha & Bao</h1>
-    <img class="hero-image" src="events.jpg" alt="Chef hand-folding fresh dumplings and a lively kitchen setup">
+    </main>
 
-    <!-- Featured Events & Services List -->
-    <ul class="events-list">
-      
-      <li class="event-item" data-icon="🥟">
-        <h3 class="event-title">Xiao Long Bao Folding Masterclass</h3>
-        <p class="event-description">Monthly Saturday morning hands-on workshop teaching guests how to roll dough, pleat, and soup-fill authentic Xiao Long Bao.</p>
-      </li>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Cha & Bao <span class="cn-char">茶与包</span></div>
+            <div class="manager-title">Manager: [Your Name]</div>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu & Prices</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+            <p class="copyright">&copy; 2026 Cha & Bao Restaurant. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-      <li class="event-item" data-icon="🎷">
-        <h3 class="event-title">Friday Dumplings & Live Jazz Nights</h3>
-        <p class="event-description">Every Friday evening at 7 PM, enjoy live acoustic jazz music while sharing steamer baskets and craft cocktails.</p>
-      </li>
-
-      <li class="event-item" data-icon="🍵">
-        <h3 class="event-title">Tea & Dim Sum Pairing Circle</h3>
-        <p class="event-description">Join our tasting circle every first Monday evening. Learn how to pair premium loose-leaf Chinese teas with savory bao.</p>
-      </li>
-
-      <li class="event-item" data-icon="🥢">
-        <h3 class="event-title">Seasonal Chef’s Tasting Flights</h3>
-        <p class="event-description">Sample limited-edition micro-batches like Truffle Xiao Long Bao and Wagyu Shao Mai guided by our head chef.</p>
-      </li>
-
-      <li class="event-item" data-icon="🎤">
-        <h3 class="event-title">Community Open Mic & Storytelling</h3>
-        <p class="event-description">A monthly showcase for local performers, poets, and storytellers. Free order of Sweet Custard Buns for all performers.</p>
-      </li>
-    </ul>
-  </div>
-<main>
-
-    
 </body>
 </html>
