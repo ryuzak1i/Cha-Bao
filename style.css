@@ -252,6 +252,7 @@ header {
     align-items: stretch; /* Forces both boxes to be the exact same height */
     gap: 3rem; 
     flex-wrap: wrap; 
+    border-top: 24px solid #4a7b59
 }
 
 .promo-content {
@@ -383,7 +384,6 @@ header {
    MENU HERO INTRO
 ========================================= */
 .menu-section {
-    background-image: url(images/jade-bkg.png);
     padding: 12rem 2rem 6rem 2rem;
     background-color: #faf8f5;
     color: #1a1a1a;
@@ -419,20 +419,21 @@ header {
 }
 
 /* =========================================
-   MENU CATALOGUE GRID (CSS GRID)
+   MENU CATALOGUE GRID
 ========================================= */
 .menu-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    display: flex; /* Switched from Grid to Flexbox */
+    flex-wrap: wrap; /* Allows cards to drop to the next line */
+    justify-content: center; /* Centers the orphaned cards on the bottom row */
     gap: 2.5rem;
     max-width: 1300px;
     margin: 0 auto;
     padding: 5rem 2rem;
 }
 
-/* Spans the category title across all grid columns */
+/* Forces the category title to take up its own full row */
 .menu-options > h1 {
-    grid-column: 1 / -1;
+    flex: 0 0 100%; 
     text-align: center;
     font-size: 2.8rem;
     color: #8b0000;
@@ -442,6 +443,8 @@ header {
 }
 
 .menu-card {
+    flex: 1 1 300px; /* Allows cards to scale fluidly */
+    max-width: 380px; /* Locks the max width so the bottom two cards don't stretch too wide */
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
@@ -626,7 +629,6 @@ header {
     border-radius: 50%;
     margin-bottom: 1.5rem;
     font-family: 'Cardo', serif;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
 }
 
 .page-header h1 {
@@ -655,8 +657,9 @@ header {
 /* --- Events Grid --- */
 .events-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex; /* Switched to flexbox */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centers the orphaned cards on the bottom row */
     gap: 2.5rem;
     padding: 0;
     text-align: left;
@@ -664,11 +667,14 @@ header {
 
 /* --- Individual Event Cards --- */
 .event-item {
+    flex: 1 1 300px; /* Allows cards to grow and shrink, with a base width of 300px */
+    max-width: 350px; /* Prevents them from stretching too wide */
+    
     background-color: #ffffff;
     padding: 2.5rem 2.5rem 3rem 2.5rem;
     border-radius: 8px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-    border-top: 10px solid #d4af37; /* Gold accent line matching home page */
+    border-top: 10px solid #d4af37;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
