@@ -383,6 +383,7 @@ header {
    MENU HERO INTRO
 ========================================= */
 .menu-section {
+    background-image: url(images/jade-bkg.png);
     padding: 12rem 2rem 6rem 2rem;
     background-color: #faf8f5;
     color: #1a1a1a;
@@ -721,9 +722,17 @@ header {
     flex-grow: 1; /* Pushes content evenly if cards are different heights */
 }
 
-/* --- Temporary Fix for the Events Footer --- */
-/* (Your events.html uses different footer classes than index.html. 
-    This ensures it still looks decent until you copy/paste the main footer over!) */
+/* =========================================
+   FOOTER SECTION
+========================================= */
+footer {
+    background-color: #8b0000; 
+    width: 100%;
+    color: #faf8f5;
+    font-family: 'Poppins', sans-serif;
+    border-top: 24px solid #d4af37; 
+}
+
 footer .footer-logo {
     font-family: 'Cardo', serif;
     font-size: 2rem;
